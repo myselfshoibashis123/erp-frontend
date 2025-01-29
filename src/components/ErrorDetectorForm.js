@@ -78,11 +78,11 @@ const ErrorDetectorForm = () => {
           </div>
           <div className="form-group">
             <label>Date:</label>
-            <input type="text" value={formData.date} readOnly />
+            <input type="date" value={formData.date} onChange={(e) => setFormData({ ...formData, date: e.target.value })} />
           </div>
           <div className="form-group">
             <label>Probable Date of Completion:</label>
-            <input type="text" value={formData.probableDate} readOnly />
+            <input type="date" value={formData.probableDate}  onChange={(e) => setFormData({ ...formData, probableDate: e.target.value })}/>
             <span className="note">(for office use only)</span>
           </div>
         </div>
